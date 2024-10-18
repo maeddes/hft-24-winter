@@ -23,7 +23,7 @@
 ![Container Technology](/images/2024_11_10_container_technology.png)
 
 
-## **2024 / 09 / 23 - Introduction to distributed systems - Overview Cloud Computing**  
+## **2024 / 10 / 11 - Introduction to distributed systems - Overview Cloud Computing**  
 
 ### **Content Overview**
 1. **The NIST Cloud Definition (2011)**
@@ -84,3 +84,63 @@ By the end of this lecture, students will be able to:
 
 - Get a GitHub or GitLab or Bitbucket account
 - Play with Codespaces, Gitpod or IDX
+
+Here’s the documentation for the new lecture:
+
+---
+
+### **2024 / 10 / 18 - Introduction to Spring Boot - Overview Cloud IDEs**  
+
+### **Content Overview**
+
+1. **Introduction to Spring Boot**
+   - **Evolution of Spring to Spring Boot**: Understanding how Spring Boot simplifies Spring applications, focusing on convention over configuration.
+   - **Spring Initializr**: A web-based tool for quickly creating Spring Boot projects with customizable dependencies.
+   - **Key Dependencies**:
+     - **Web**: Building RESTful web services and web applications.
+     - **Actuator**: Providing production-ready features such as monitoring and health checks.
+   - **application.properties**: Configuration of application settings in Spring Boot projects.
+   - **Spring Boot Project Structure**: Understanding the typical structure of a Spring Boot project and how it facilitates development.
+
+2. **Overview of Cloud-Based IDEs**
+   - **GitHub Codespaces**: Cloud-hosted development environments integrated with GitHub, enabling easy setup and collaboration.
+   - **Gitpod**: Automating cloud-based development workspaces with pre-configured environments.
+   - Advantages of cloud-based IDEs for Spring Boot development: instant setup, collaboration, and scalability.
+
+---
+
+### **Learning Objectives**
+By the end of this lecture, students will be able to:
+- Describe the evolution of Spring to Spring Boot and how Spring Boot improves application development.
+- Use Spring Initializr to create Spring Boot projects with appropriate dependencies.
+- Understand and configure application properties using `application.properties` in Spring Boot.
+- Identify the key components and structure of a typical Spring Boot project.
+- Compare GitHub Codespaces and Gitpod, and explain how cloud-based IDEs enhance Spring Boot development workflows.
+
+---
+
+### **Student/Review Questions**
+1. What are the key differences between traditional Spring and Spring Boot?
+2. How does Spring Initializr simplify the creation of Spring Boot projects, and what are some essential dependencies you might include?
+3. What role does the `application.properties` file play in a Spring Boot project?
+4. What can you derive from the following code snippet:
+```java
+	@GetMapping("/hello/{name}")
+	public String sayHelloWithParameter(@PathVariable String name){
+
+		return "Hallo, "+name;
+
+	}
+```
+5. How does GitHub Codespaces or Gitpod make it easier to develop Spring Boot applications in a cloud environment?
+6. What are the key benefits of using a cloud-based IDE over a local development environment for any kind of development?
+
+---
+
+### **Suggested Reading & Resources**
+- [Spring Boot Documentation](https://spring.io/projects/spring-boot)
+- [Spring Initializr](https://start.spring.io/)
+- [Spring Boot Actuator Documentation](https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html)
+- [GitHub Codespaces Documentation](https://github.com/features/codespaces)
+- [Gitpod Documentation](https://www.gitpod.io/docs)
+
