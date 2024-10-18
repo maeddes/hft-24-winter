@@ -1,0 +1,80 @@
+: 1729245832:0;java -version
+: 1729245838:0;sdk
+: 1729245845:0;sdk install java
+: 1729246711:0;mkdir demo
+: 1729246712:0;cd demo
+: 1729246713:0;ls
+: 1729246721:0;curl start.spring.io
+: 1729246727:0;curl https://start.spring.io
+: 1729246799:0;curl -G https://start.spring.io/starter.zip -d web,actuator,data-jpa,h2 -o demo.zip
+: 1729246803:0;ls -ltr
+: 1729246807:0;unzip demo.zip
+: 1729246813:0;ls -ltr
+: 1729246829:0;rm -rf .
+: 1729246834:0;rm -rf *
+: 1729246838:0;ls -ltr
+: 1729246851:0;curl -G https://start.spring.io/starter.zip -d web,actuator,data-jpa,h2 -d type=maven-project -o demo.zip
+: 1729246853:0;ls
+: 1729246855:0;unzip demo.zip
+: 1729246861:0;ls -ltr
+: 1729246915:0;cd ..
+: 1729246918:0;rm -rf demo
+: 1729246920:0;mkdir demo
+: 1729246922:0;cd demo
+: 1729246922:0;ls
+: 1729246930:0;curl https://start.spring.io
+: 1729246976:0;curl -G https://start.spring.io/starter.zip -d web,actuator -d type=maven-project -d javaVersion=21 -o demo.zip
+: 1729246978:0;ls
+: 1729246979:0;unzip demo.zip
+: 1729247004:0;cd ..
+: 1729247006:0;rm -rf demo
+: 1729247026:0;unzip demo.zip
+: 1729247054:0;cd demo
+: 1729247060:0;cd ..
+: 1729247062:0;rm demo.zip
+: 1729247099:0;ls
+: 1729247101:0;cd demo
+: 1729247106:0;mvn spring-boot:run
+: 1729258193:0;cd demo
+: 1729258196:0;mvn clean package
+: 1729258202:0;cd 18_10_spring_boot_demo
+: 1729258204:0;ls
+: 1729258207:0;mvn clean package
+: 1729258222:0;ls target
+: 1729258262:0;mvn clean verify
+: 1729258287:0;ls target
+: 1729258548:0;cd ..
+: 1729258549:0;ls
+: 1729258552:0;mkdir tmp
+: 1729258554:0;history
+: 1729258559:0;curl https://start.spring.io
+: 1729258590:0;cd tmp
+: 1729258604:0;curl -G https://start.spring.io/starter.zip -o demo.zip
+: 1729258606:0;ls
+: 1729258609:0;unzip demo.zip
+: 1729259116:0;cd ..
+: 1729259120:0;rm -rf tmp
+: 1729259122:0;mkdir tmp
+: 1729259124:0;cd tmp
+: 1729259129:0;curl https://start.spring.io
+: 1729259149:0;curl -G https://start.spring.io/starter.tgz | tar -xzvf -
+: 1729259225:0;cd ..
+: 1729259227:0;rm -rf tmp
+: 1729259230:0;mkdir tmp
+: 1729259234:0;curl https://start.spring.io
+: 1729259262:0;curl -G https://start.spring.io/starter.tgz -d dependencies=web,actuator -d type=maven-project | tar -xzvf -
+: 1729259315:0;cd tmp
+: 1729259321:0;history | grep curl
+: 1729259368:0;curl -G https://start.spring.io/starter.tgz -d dependencies=web,actuator,data-jpa,h2 -d type=maven-project | tar -xzvf -
+: 1729259390:0;cd ..
+: 1729259392:0;ls
+: 1729259832:0;rm -rf tmp src
+: 1729259833:0;ls -ltr
+: 1729259838:0;cd 18_10_spring_boot_demo
+: 1729259840:0;ls -ltr
+: 1729259866:0;history
+: 1729259883:0;ls -ltr
+: 1729259921:0;cat ~/.bash_profile
+: 1729259944:0;ls
+: 1729260007:0;echo $HISTFILE
+: 1729260035:0;cp /workspace/.gitpod/.shell_history .
