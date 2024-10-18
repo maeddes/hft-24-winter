@@ -143,4 +143,8 @@ By the end of this lecture, students will be able to:
 - [Spring Boot Actuator Documentation](https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html)
 - [GitHub Codespaces Documentation](https://github.com/features/codespaces)
 - [Gitpod Documentation](https://www.gitpod.io/docs)
+- [Baeldung Actuator] (https://www.baeldung.com/spring-boot-actuator-enable-endpoints)
+
+### Homework
+- Build a Spring Boot Hello, World REST API Project using Codespaces or GitPod
 
