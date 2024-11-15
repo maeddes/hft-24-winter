@@ -182,3 +182,45 @@ By the end of this lecture, students will be able to:
 - Get a Dockerhub account
 - Work through the exercises
 
+## **2024 / 11 / 08 - Cloud-Native Theory**  
+
+### **Content Overview**
+
+1. **Distributed Systems Theory**
+   - **CAP Theorem**: Understanding the trade-offs between Consistency, Availability, and Partition Tolerance in distributed systems.
+   - **Conway's Law**: Exploring how software design reflects organizational structure and its implications for distributed systems.
+   - **12-Factor Applications**: Best practices for building scalable, maintainable applications, focusing on principles like configuration, dependencies, and logging.
+   - **Microservices**: Basic concept of microservices, its advantages, and challenges in distributed systems.
+
+---
+
+### **Learning Objectives**
+By the end of this lecture, students will be able to:
+- Describe the CAP Theorem, its components, and how it affects design choices in distributed systems.
+- Explain Conway’s Law and its influence on software architecture, especially in the context of microservices.
+- List and apply the 12 factors for building scalable, portable, and maintainable applications.
+- Define and differentiate microservices architecture from other architectural styles.
+
+### **ABOVE ALL**
+
+Be able to relate the concepts of CAP theorem and the 12-factor apps to the technologies we are covering in the lecture,
+e.g. how do technologies like Spring Boot (or other frameworks/languages), Docker, Kubernetes incorporate or implement those aspects
+
+---
+
+### **Student/Review Questions**
+1. What are the components of the CAP Theorem, and why can’t a distributed system fully achieve all three?
+2. How does Conway’s Law impact the structure of a distributed system, especially when adopting a microservices architecture?
+3. What are the key factors of a 12-factor app, and how do they contribute to application scalability and resilience?
+4. Describe microservices concepts and some of its advantages over a monolithic architecture.
+
+---
+
+### **Suggested Reading & Resources**
+- [Understanding the CAP Theorem](https://cs.uwaterloo.ca/~kmsalem/courses/CS848/W16/readings/cap.pdf)
+- [Conway’s Law - A Key Consideration in Architecture](https://www.thoughtworks.com/insights/blog/conways-law-and-modern-software-factories)
+- [The Twelve-Factor App](https://12factor.net/)
+- [Microservices Architecture Documentation](https://microservices.io/patterns/microservices.html)
+- [Roy Fielding’s REST Dissertation](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)
+- [HTTP Status Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+- [Richardson's Maturity Model](https://martinfowler.com/articles/richardsonMaturityModel.html)
