@@ -182,7 +182,7 @@ By the end of this lecture, students will be able to:
 - Get a Dockerhub account
 - Work through the exercises
 
-## **2024 / 11 / 08 - Cloud-Native Theory**  
+## **2024 / 11 / 08 - Cloud-Native Theory and Persistence **  
 
 ### **Content Overview**
 
@@ -192,14 +192,22 @@ By the end of this lecture, students will be able to:
    - **12-Factor Applications**: Best practices for building scalable, maintainable applications, focusing on principles like configuration, dependencies, and logging.
    - **Microservices**: Basic concept of microservices, its advantages, and challenges in distributed systems.
 
+ 2. **Introduction to Persistence, ORM, Spring Data, and Spring Data JPA**
+   - **Persistence and ORM**: Discussed the importance of persistence for long-term data storage, introducing ORM as a way to map objects to relational database tables seamlessly.
+   - **Spring Data JPA**: Explored how Spring Data JPA simplifies data access through repository interfaces, enabling easy CRUD operations and custom queries without boilerplate code.
+
 ---
 
 ### **Learning Objectives**
 By the end of this lecture, students will be able to:
+
 - Describe the CAP Theorem, its components, and how it affects design choices in distributed systems.
 - Explain Conway’s Law and its influence on software architecture, especially in the context of microservices.
 - List and apply the 12 factors for building scalable, portable, and maintainable applications.
 - Define and differentiate microservices architecture from other architectural styles.
+
+- Explain the concepts of **persistence** and **ORM** and identify their importance in distributed, database-driven applications.
+- Set up **Spring Data JPA** to interact with a relational database and configure it using Docker Compose.
 
 ### **ABOVE ALL**
 
@@ -213,6 +221,8 @@ e.g. how do technologies like Spring Boot (or other frameworks/languages), Docke
 2. How does Conway’s Law impact the structure of a distributed system, especially when adopting a microservices architecture?
 3. What are the key factors of a 12-factor app, and how do they contribute to application scalability and resilience?
 4. Describe microservices concepts and some of its advantages over a monolithic architecture.
+5. What is Object-Relational Mapping (ORM), and why is it beneficial for a database-backed application?
+6. Explain how Spring Data JPA helps in managing CRUD operations in a database. 
 
 ---
 
