@@ -231,6 +231,22 @@ e.g. how do technologies like Spring Boot (or other frameworks/languages), Docke
 - [Conway’s Law - A Key Consideration in Architecture](https://www.thoughtworks.com/insights/blog/conways-law-and-modern-software-factories)
 - [The Twelve-Factor App](https://12factor.net/)
 - [Microservices Architecture Documentation](https://microservices.io/patterns/microservices.html)
+
+
+
+
+
+## **2024 / 11 / 15 - APIs and REST & Distributed Application Development
+
+## **HOMEWORK!!**
+
+- Watch the recordings from the previous session - priority on cloud-native theory!
+
+
+
+
+### **Suggested Reading & Resources**
+
 - [Roy Fielding’s REST Dissertation](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)
 - [HTTP Status Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
 - [Richardson's Maturity Model](https://martinfowler.com/articles/richardsonMaturityModel.html)
