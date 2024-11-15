@@ -2,18 +2,24 @@ package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-@RestController
 public class DemoApplication {
 
-	@GetMapping("/hello")
+	@GetMapping("/getHello")
 	public String sayHello(){
 
-		return "Hallo, Hft!";
+		return "Hallo, Hft! (GET Call)";
+
+	}
+
+	@PostMapping("/postHello")
+	public String postHello(){
+
+		return "Hallo, Hft! (POST Call)";
 
 	}
 

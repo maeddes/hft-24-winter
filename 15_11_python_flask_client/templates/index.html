@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Items</title>
+</head>
+<body>
+    <h1>Shopping Items</h1>
+    <a href="/add">Add Item</a>
+    <ul>
+        {% for item in items %}
+        <li>
+            {{ item.name }} - {{ item.amount }}
+            <a href="/update/{{ item.name }}">Update</a>
+            <a href="/delete/{{ item.name }}">Delete</a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <ul>
+        {% for category, message in messages %}
+        <li class="{{ category }}">{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+</body>
+</html>

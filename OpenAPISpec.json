@@ -1,0 +1,202 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+      "title": "OpenAPI definition",
+      "version": "v0"
+    },
+    "servers": [
+      {
+        "url": "PUT_YOUR_SERVER_IN_HERE",
+        "description": "Generated server url"
+      }
+    ],
+    "tags": [
+      {
+        "name": "Shopping Items API",
+        "description": "Manage your shopping items"
+      }
+    ],
+    "paths": {
+      "/api/shoppingItems/{name}": {
+        "get": {
+          "tags": [
+            "Shopping Items API"
+          ],
+          "summary": "Get a shopping item by name",
+          "operationId": "getItemByName",
+          "parameters": [
+            {
+              "name": "name",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Item found",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ShoppingItem"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Item not found",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ShoppingItem"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "put": {
+          "tags": [
+            "Shopping Items API"
+          ],
+          "summary": "Update a shopping item by name",
+          "operationId": "updateItem",
+          "parameters": [
+            {
+              "name": "name",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ShoppingItem"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ShoppingItem"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "delete": {
+          "tags": [
+            "Shopping Items API"
+          ],
+          "summary": "Delete a shopping item by name",
+          "operationId": "deleteItem",
+          "parameters": [
+            {
+              "name": "name",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        }
+      },
+      "/api/shoppingItems": {
+        "get": {
+          "tags": [
+            "Shopping Items API"
+          ],
+          "summary": "Get all shopping items",
+          "operationId": "getAllItems",
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/ShoppingItem"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "post": {
+          "tags": [
+            "Shopping Items API"
+          ],
+          "summary": "Add a new shopping item",
+          "operationId": "addItem",
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ShoppingItem"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "201": {
+              "description": "Item created successfully",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ShoppingItem"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid request payload",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ShoppingItem"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "ShoppingItem": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "amount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        }
+      }
+    }
+  }
