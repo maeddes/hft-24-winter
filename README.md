@@ -234,6 +234,8 @@ e.g. how do technologies like Spring Boot (or other frameworks/languages), Docke
 
 ## **2024 / 11 / 15 - APIs and REST & Distributed Application Development
 
+![REST and multi-application setup](/images/2024_11_15_REST_multi_container.png)
+
 ### **Content Overview**
 
 1. **API and REST**  
