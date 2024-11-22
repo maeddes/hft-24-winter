@@ -30,6 +30,9 @@ def add_item():
         if response.status_code == 201:
             flash("Item added successfully!", "success")
             return redirect(url_for('index'))
+        if response.status_code == 200:
+            flash("Item updated successfully!", "success")
+            return redirect(url_for('index'))
         else:
             flash("Failed to add item.", "error")
     return render_template('add_item.html')

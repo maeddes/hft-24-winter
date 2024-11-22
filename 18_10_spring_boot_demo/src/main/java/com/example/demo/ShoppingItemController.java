@@ -4,7 +4,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import io.swagger.v3.oas.annotations.Operation;
@@ -16,22 +15,37 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 @Tag(name = "Shopping Items API", description = "Manage your shopping items")
 public class ShoppingItemController {
 
-    private final List<ShoppingItem> shoppingItems = new ArrayList<>();
+    // goodbye in memory state private final List<ShoppingItem> shoppingItems = new ArrayList<>();
+
+    private final ShoppingItemRepository shoppingItemRepository;
+
+    public ShoppingItemController(ShoppingItemRepository shoppingItemRepository) {
+        this.shoppingItemRepository = shoppingItemRepository;
+    }
 
     @PostMapping
     @Operation(summary = "Add a new shopping item", responses = {
+            @ApiResponse(responseCode = "200", description = "Item updated successfully"),
             @ApiResponse(responseCode = "201", description = "Item created successfully"),
             @ApiResponse(responseCode = "400", description = "Invalid request payload")
     })
     public ResponseEntity<ShoppingItem> addItem(@RequestBody ShoppingItem shoppingItem) {
-        shoppingItems.add(shoppingItem);
-        return new ResponseEntity<>(shoppingItem, HttpStatus.CREATED);
+        return shoppingItemRepository.findByNameIgnoreCase(shoppingItem.getName())
+                .map(existingItem -> {
+                    existingItem.setAmount(existingItem.getAmount() + shoppingItem.getAmount());
+                    shoppingItemRepository.save(existingItem);
+                    return ResponseEntity.ok(existingItem);
+                })
+                .orElseGet(() -> {
+                    ShoppingItem savedItem = shoppingItemRepository.save(shoppingItem);
+                    return ResponseEntity.status(HttpStatus.CREATED).body(savedItem);
+                });
     }
 
     @GetMapping
     @Operation(summary = "Get all shopping items")
     public List<ShoppingItem> getAllItems() {
-        return shoppingItems;
+        return shoppingItemRepository.findAll();
     }
 
     @GetMapping("/{name}")
@@ -40,34 +54,34 @@ public class ShoppingItemController {
             @ApiResponse(responseCode = "404", description = "Item not found")
     })
     public ResponseEntity<ShoppingItem> getItemByName(@PathVariable String name) {
-        return shoppingItems.stream()
-                .filter(item -> item.getName().equalsIgnoreCase(name))
-                .findFirst()
+        return shoppingItemRepository.findByNameIgnoreCase(name)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
     }
 
     @PutMapping("/{name}")
-    @Operation(summary = "Update a shopping item by name")
+    @Operation(summary = "Update a shopping item by name", responses = {
+        @ApiResponse(responseCode = "200", description = "Item updated successfully"),
+        @ApiResponse(responseCode = "404", description = "Item not found")
+    })
     public ResponseEntity<ShoppingItem> updateItem(@PathVariable String name, @RequestBody ShoppingItem updatedItem) {
-        for (ShoppingItem item : shoppingItems) {
-            if (item.getName().equalsIgnoreCase(name)) {
-                item.setAmount(updatedItem.getAmount());
-                return ResponseEntity.ok(item);
-            }
-        }
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        return shoppingItemRepository.findByNameIgnoreCase(name)
+                .map(existingItem -> {
+                    existingItem.setAmount(updatedItem.getAmount());
+                    shoppingItemRepository.save(existingItem);
+                    return ResponseEntity.ok(existingItem);
+                })
+                .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
     }
 
     @DeleteMapping("/{name}")
     @Operation(summary = "Delete a shopping item by name")
-    public ResponseEntity<Void> deleteItem(@PathVariable String name) {
-        boolean removed = shoppingItems.removeIf(item -> item.getName().equalsIgnoreCase(name));
-        if (removed) {
-            return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
-        } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-        }
+    public ResponseEntity<String> deleteItem(@PathVariable String name) {
+        return shoppingItemRepository.findByNameIgnoreCase(name)
+                .map(existingItem -> {
+                    shoppingItemRepository.delete(existingItem);
+                    return ResponseEntity.status(HttpStatus.NO_CONTENT).body("Item deleted successfully.");
+                })
+                .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).body("Item not found."));
     }
-
 }
