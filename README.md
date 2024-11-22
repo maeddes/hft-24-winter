@@ -232,18 +232,51 @@ e.g. how do technologies like Spring Boot (or other frameworks/languages), Docke
 - [The Twelve-Factor App](https://12factor.net/)
 - [Microservices Architecture Documentation](https://microservices.io/patterns/microservices.html)
 
-
-
-
-
 ## **2024 / 11 / 15 - APIs and REST & Distributed Application Development
+
+### **Content Overview**
+
+1. **API and REST**  
+   - **HTTP Basics**: Core concepts of HTTP for APIs, including request/response structure.  
+   - **Introduction to REST**: Understanding the foundational ideas of REST as defined by Roy Fielding and how RESTful APIs communicate.  
+   - **Nouns and Verbs**: Structuring REST APIs around resources (nouns) and actions (verbs).  
+   - **Representation**: Data formats in REST (e.g., JSON, XML) and the role of content negotiation.  
+   - **HTTP Return Codes**: Standard HTTP status codes, their meanings, and when to use each in API responses.  
+   - **Idempotency**: Ensuring repeatable requests yield the same results to prevent unintended side effects.  
+   - **Richardson's Maturity Model**: Levels of RESTful maturity, from Level 0 (HTTP as a tunnel) to Level 3 (HATEOAS), to understand API design progression.  
+   - **OpenAPI and Swagger**: Using OpenAPI for defining APIs, ensuring consistency, and employing Swagger UI for visualization and testing.
+
+2. **Docker-Compose for Multi-Component Applications**  
+   - Setting up multi-component applications using Docker Compose, integrating backend APIs, databases, and frontends in a single `docker-compose.yml` file.  
+   - Configuration of service communication, externalized settings, and container networking to simplify deployment and scaling.
+
+---
+
+### **Objectives and Exercises**
+
+*Students should be able to:*
+
+- Describe the foundational principles of REST and explain the HTTP concepts that underpin REST APIs.  
+- Use OpenAPI to define REST APIs and visualize them with Swagger UI.  
+- Create and configure a Docker Compose file to integrate multiple application components and enable effective communication between services.  
+
+---
+
+### **Student/Review Questions**
+
+1. **What are the core principles of REST, and how do they align with HTTP concepts?**  
+2. **Explain the importance of structuring REST APIs around resources (nouns) and actions (verbs). Provide examples.**  
+3. **What is Richardson’s Maturity Model, and how does it help assess the maturity of a REST API?**  
+4. **Why is idempotency important in REST APIs? Give an example of an idempotent and a non-idempotent HTTP method.**  
+5. **Describe the advantages of using OpenAPI for REST API documentation.**  
+6. **How does Docker Compose enable multi-component application setups, and what are the benefits of externalized configuration?**  
+7. **Explain the role of container networking in Docker Compose and how it facilitates service communication.**
+
+---
 
 ## **HOMEWORK!!**
 
 - Watch the recordings from the previous session - priority on cloud-native theory!
-
-
-
 
 ### **Suggested Reading & Resources**
 
