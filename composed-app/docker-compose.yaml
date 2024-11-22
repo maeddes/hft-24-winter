@@ -1,4 +1,15 @@
 services:
+  frontendflask:
+    image: frontendflask
+    networks:
+      - shopnet
+    ports:
+      - "5000:5000"  # Exposes Flask app on port 5000
+    environment:
+      SPRING_BOOT_API_URL: http://backendspringboot:8080/api/shoppingItems
+    depends_on:
+      - backendspringboot  
+
   backendspringboot:
     container_name: backendspringboot
     image: backendspringboot
@@ -7,9 +18,9 @@ services:
     ports:
       - "8080:8080"
     depends_on:
-      - postgres
+      - dbpostgres
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/shoppingdb
+      SPRING_DATASOURCE_URL: jdbc:postgresql://dbpostgres:5432/shoppingdb
       SPRING_DATASOURCE_USERNAME: yourusername
       SPRING_DATASOURCE_PASSWORD: yourpassword
 

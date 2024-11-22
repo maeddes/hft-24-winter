@@ -1,11 +1,15 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 import requests
+import os
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'  # For flash messages
 
-# Base URL for the Spring Boot API
-SPRING_BOOT_API_URL = "http://localhost:8080/api/shoppingItems"
+# Base URL for the Spring Boot API - hardcoded is bad!
+# SPRING_BOOT_API_URL = "http://localhost:8080/api/shoppingItems"
+
+# Read the environment variable
+SPRING_BOOT_API_URL = os.getenv("SPRING_BOOT_API_URL", "http://localhost:8080/api/shoppingItems")  # Default value if not set
 
 # Home Page: Display all shopping items
 @app.route('/')
