@@ -1,6 +1,6 @@
 services:
   frontendflask:
-    image: frontendflask
+    image: maeddes/frontendflask:hft24
     networks:
       - shopnet
     ports:
@@ -12,7 +12,7 @@ services:
 
   backendspringboot:
     container_name: backendspringboot
-    image: backendspringboot
+    image: maeddes/backendspringboot:hft24
     networks:
       - shopnet
     ports:
