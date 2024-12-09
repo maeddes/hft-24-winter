@@ -292,17 +292,33 @@ e.g. how do technologies like Spring Boot (or other frameworks/languages), Docke
 
 ### Docker Advanced: Networks, Volumes, and Compose  
 
-#### Overview  
-This lecture delves into advanced Docker concepts, focusing on networking, volumes, and multi-container setups using Docker Compose. You'll explore how containers communicate through custom networks, manage data persistence effectively with volumes, and orchestrate multi-service applications. These foundational skills are essential for building and deploying robust containerized applications in modern cloud-native environments.  
+### **Content Overview**  
 
-#### Learning Objectives  
-By the end of this lecture, you will be able to:  
-1. Understand the different Docker network modes and configure custom networks.  
-2. Identify and use appropriate volume types for container data persistence.  
-3. Utilize Docker Compose to define and manage multi-container applications.  
-4. Apply best practices for networking and volume management in real-world scenarios.  
+This lecture explores advanced Docker features that are essential for managing containerized applications in cloud-native environments. Students will learn about Docker networking modes, data persistence with volumes, and orchestrating multi-container applications using Docker Compose. By mastering these topics, students will be able to design, deploy, and manage robust containerized systems effectively.  
 
-#### Exercises  
+---  
+
+### **Learning Objectives**  
+
+By the end of this lecture, students will be able to:  
+1. Explain Docker's network modes and create custom networks to manage container communication.  
+2. Differentiate between bind mounts and named volumes, and apply them for persistent data storage.  
+3. Design and implement multi-container applications using Docker Compose.  
+4. Optimize container setups by combining networking and volume management best practices.  
+
+---  
+
+### **Student/Review Questions**  
+
+1. What are the main differences between Docker’s bridge and host network modes?  
+2. How does a named volume differ from a bind mount, and when should each be used?  
+3. In a `docker-compose.yml` file, how do you define a custom network and attach services to it?  
+4. What is the purpose of Docker’s internal DNS service, and how does it enhance container communication?  
+5. How can you persist data for a containerized database across container restarts?
+
+---
+
+### **Exercises**  
 1. **Networking Practice**:  
    - Create a custom Docker network and deploy two containers to communicate within it.  
    - Verify connectivity using tools like `ping` and DNS resolution.  
@@ -315,10 +331,5 @@ By the end of this lecture, you will be able to:
    - Build and deploy a web application with a backend database using Docker Compose.  
    - Define networks and volumes in the `docker-compose.yml` file.  
 
-#### Review Questions  
-1. What are the key differences between bridge and host network modes in Docker?  
-2. How does Docker’s DNS service simplify container communication in custom networks?  
-3. Explain the concept of bind mounts and named volumes. When would you use each?  
-4. What are the essential sections of a `docker-compose.yml` file?  
-5. How can you define and share a volume across multiple services in Docker Compose?  
+ 
 
