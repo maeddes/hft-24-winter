@@ -385,6 +385,8 @@ By the end of this lecture, students will be able to:
 
 ### Different ways to access a Kubernetes environment (Public Cloud, Codespace, local (Kind, Minikube,...))
 
+![Different Kubernetes Offerings](https://github.com/maeddes/hse-24-winter/blob/main/images/2024_12_02_Kubernetes_Options.png)
+
 ### Recap and relationship of important API objects
 
 ![K8s objects relationships](images/2024_12_13_Kubernetes_API_Object_Relationships.png)
