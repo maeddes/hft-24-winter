@@ -394,3 +394,8 @@ By the end of this lecture, students will be able to:
 ### Defining a multi-application Kubernetes configuration - making things run and communicate
 
 ![K8s multi object definition](images/2024_12_13_Kubernetes_Multi_App_Definition.png)
+
+## next week
+
+- show slides and theory about services and recap API objects
+- scale, fail, observe, udpate, patch apps in Kubernetes
