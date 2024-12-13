@@ -380,3 +380,15 @@ By the end of this lecture, students will be able to:
 6. **How do ReplicaSets help ensure application reliability?**  
 7. **What are deployments in Kubernetes, and how do they simplify updates and rollbacks?**  
 8. **How do services in Kubernetes enable communication between pods and expose applications externally?**
+
+## **2024-12-13 Kubernetes in Action ##
+
+### Different ways to access a Kubernetes environment (Public Cloud, Codespace, local (Kind, Minikube,...))
+
+### Recap and relationship of important API objects
+
+![K8s objects relationships](images/2024_12_13_Kubernetes_API_Object_Relationships.png)
+
+### Defining a multi-application Kubernetes configuration - making things run and communicate
+
+![K8s multi object definition](images/2024_12_13_Kubernetes_Multi_App_Definition.png)
