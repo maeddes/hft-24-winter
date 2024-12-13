@@ -297,7 +297,7 @@ e.g. how do technologies like Spring Boot (or other frameworks/languages), Docke
 This lecture explores advanced Docker features that are essential for managing containerized applications in cloud-native environments. Students will learn about Docker networking modes, data persistence with volumes, and orchestrating multi-container applications using Docker Compose. By mastering these topics, students will be able to design, deploy, and manage robust containerized systems effectively.  
 
 ---  
-
+      
 ### **Learning Objectives**  
 
 By the end of this lecture, students will be able to:  
@@ -331,5 +331,52 @@ By the end of this lecture, students will be able to:
    - Build and deploy a web application with a backend database using Docker Compose.  
    - Define networks and volumes in the `docker-compose.yml` file.  
 
- 
+## **2024 / 11 / 29 - No lecture - Projektwoche**
 
+## **2024 / 12 / 06 - Kubernetes Introduction**
+
+### **Content Overview**
+
+1. **Introduction to Kubernetes**  
+   - **What is Kubernetes?**: High-level overview of Kubernetes as a container orchestration platform.  
+   - **Why Kubernetes?**: Key benefits, including scalability, fault tolerance, and management of containerized applications.  
+
+2. **Kubernetes Cluster Architecture**  
+   - **Control Plane and Worker Nodes**: Explanation of the roles and responsibilities of the control plane and worker nodes in a Kubernetes cluster.  
+   - **Key Components**: Overview of critical components like `kube-apiserver`, `etcd`, `kube-scheduler`, `kube-controller-manager`, and `kubelet`.  
+
+![Kubernetes High Level Architecture](images/2024_11_11_kubernetes_architecture.png)
+
+3. **Declarative Working Mode**  
+   - **Configuration as Code**: Introduction to Kubernetes' declarative approach for managing application state using YAML manifests.  
+   - **Reconciliation Loop**: How Kubernetes ensures desired state matches the actual state through its control loop.  
+
+4. **Most Important API Objects**  
+   - **Pods**: The smallest deployable unit in Kubernetes, representing one or more containers.  
+   - **ReplicaSets**: Ensuring the desired number of pod replicas are running.  
+   - **Deployments**: Managing updates and rollbacks for applications.  
+   - **Services**: Enabling communication between pods and exposing applications to external users.
+
+---
+
+### **Objectives and Exercises**
+
+*Students should be able to:*
+
+- Explain what Kubernetes is, why it is used, and its primary benefits.  
+- Describe the architecture of a Kubernetes cluster and the roles of its key components.  
+- Demonstrate understanding of the declarative approach for managing applications in Kubernetes.  
+- Identify and explain the purpose of key Kubernetes API objects, including pods, ReplicaSets, deployments, and services.  
+
+---
+
+### **Student/Review Questions**
+
+1. **What is Kubernetes, and why is it essential for managing containerized applications?**  
+2. **Describe the roles of the control plane and worker nodes in a Kubernetes cluster.**  
+3. **What is the function of the `kube-apiserver` and `etcd` in Kubernetes?**  
+4. **Explain Kubernetes’ declarative working mode. How does the reconciliation loop ensure consistency?**  
+5. **What is a pod in Kubernetes, and how does it differ from a container?**  
+6. **How do ReplicaSets help ensure application reliability?**  
+7. **What are deployments in Kubernetes, and how do they simplify updates and rollbacks?**  
+8. **How do services in Kubernetes enable communication between pods and expose applications externally?**
