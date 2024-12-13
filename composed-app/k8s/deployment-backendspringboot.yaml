@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: backendspringboot
+  name: backendspringboot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backendspringboot
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: backendspringboot
+    spec:
+      containers:
+      - image: maeddes/backendspringboot:hft24v1
+        name: backendspringboot
+        env:
+          - name: SPRING_DATASOURCE_URL
+            value: "jdbc:postgresql://dbpostgres:5432/shoppingdb"
+          - name: SPRING_DATASOURCE_USERNAME
+            value: "yourusername"
+          - name: SPRING_DATASOURCE_PASSWORD
+            value: "yourpassword"
+        resources: {}
+status: {}

@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontendflask
+  labels:
+    app: frontendflask
+spec:
+  selector:
+    app: frontendflask
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 5000
+  type: NodePort
