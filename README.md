@@ -395,6 +395,29 @@ By the end of this lecture, students will be able to:
 
 ![K8s multi object definition](images/2024_12_13_Kubernetes_Multi_App_Definition.png)
 
+### **Content Overview**  
+
+This lecture provides an introduction to Kubernetes deployment options and revisits essential Kubernetes API objects in greater detail. Students will explore free Kubernetes trials offered by major cloud providers, local deployment tools like Minikube and Kind, and how to use Kubernetes in cloud-based IDEs like GitHub Codespaces. The session also deepens understanding of fundamental API objects such as Pods, Deployments, and Services, equipping students with practical knowledge for managing containerized applications in Kubernetes.  
+
+---
+
+### **Learning Objectives**  
+
+By the end of this lecture, students will be able to:  
+1. Identify and compare Kubernetes deployment options, including cloud trials and local setups.  
+2. Set up a Kubernetes cluster locally using tools like Minikube or Kind, and within GitHub Codespaces.  
+3. Describe the roles and relationships of basic Kubernetes API objects, including Pods, Deployments, and Services.  
+4. Deploy and manage containerized applications using Kubernetes API objects.  
+
+---  
+### **Student/Review Questions**  
+
+1. What are the advantages and limitations of using Kubernetes free trials from cloud providers compared to local tools like Minikube?  
+2. How does Minikube enable Kubernetes functionality within a GitHub Codespaces environment?  
+3. What is the role of a Pod in Kubernetes, and how does it differ from a Deployment?  
+4. How do Services enable communication between Kubernetes Pods and external clients?  
+5. How can you use a Deployment to ensure high availability for an application in Kubernetes? 
+
 ## next week
 
 - show slides and theory about services and recap API objects
