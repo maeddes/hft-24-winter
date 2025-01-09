@@ -381,7 +381,7 @@ By the end of this lecture, students will be able to:
 7. **What are deployments in Kubernetes, and how do they simplify updates and rollbacks?**  
 8. **How do services in Kubernetes enable communication between pods and expose applications externally?**
 
-## **2024-12-13 Kubernetes in Action ##
+## **2024-12-13 Kubernetes in Action**
 
 ### Different ways to access a Kubernetes environment (Public Cloud, Codespace, local (Kind, Minikube,...))
 
@@ -410,6 +410,7 @@ By the end of this lecture, students will be able to:
 4. Deploy and manage containerized applications using Kubernetes API objects.  
 
 ---  
+
 ### **Student/Review Questions**  
 
 1. What are the advantages and limitations of using Kubernetes free trials from cloud providers compared to local tools like Minikube?  
@@ -418,7 +419,28 @@ By the end of this lecture, students will be able to:
 4. How do Services enable communication between Kubernetes Pods and external clients?  
 5. How can you use a Deployment to ensure high availability for an application in Kubernetes? 
 
-## next week
+## **2024-12-20 Kubernetes Behaviour & Networking**
 
-- show slides and theory about services and recap API objects
-- scale, fail, observe, udpate, patch apps in Kubernetes
+### **Content Overview**  
+
+In this final Kubernetes lecture, wd explored key concepts to manage and scale applications effectively. The lecture covered the three main Kubernetes Service types—ClusterIP, NodePort, and LoadBalancer—and their use cases. Students also learned how to scale instances in a Deployment, achieving automatic load-balancing across Pods using a ClusterIP Service. The session demonstrated how Kubernetes handles automatic updates of applications through rolling updates in Deployments and how it ensures high availability by automatically recovering failed instances.  
+
+---  
+### **Learning Objectives**  
+
+By the end of this lecture, students will be able to:  
+1. Differentiate between the three main Kubernetes Service types: ClusterIP, NodePort, and LoadBalancer.  
+2. Scale a Kubernetes Deployment to handle increased load and distribute traffic automatically across instances.  
+3. Implement rolling updates in a Deployment to update applications without downtime.  
+4. Explain how Kubernetes ensures application stability by automatically recovering from Pod failures.  
+
+---  
+### **Student/Review Questions**  
+
+1. What are the differences between ClusterIP, NodePort, and LoadBalancer Services in Kubernetes?  
+2. How does Kubernetes automatically distribute incoming traffic across multiple instances in a Deployment?  
+3. How can you scale a Deployment to add more instances of your application?  
+4. What is a rolling update in Kubernetes, and why is it important for managing application updates?  
+5. How does Kubernetes detect and recover from crashed or failed Pods automatically?  
+6. Why is load-balancing critical in distributed systems, and how does Kubernetes achieve this with Services?  
+
