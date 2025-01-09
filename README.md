@@ -421,6 +421,12 @@ By the end of this lecture, students will be able to:
 
 ## **2024-12-20 Kubernetes Behaviour & Networking**
 
+![Scenario 1](images/2024_12_20_Kubernetes_Scenarios_Recovery_From_Failure.png)
+
+![Scenario 2](images/2024_12_20_Kubernetes_Scenarios_Load_Balancing.png)
+
+![Scenario 3](images/2024_12_20_Kubernetes_Scenarios_Zero_Downtime_Update.png)
+
 ### **Content Overview**  
 
 In this final Kubernetes lecture, wd explored key concepts to manage and scale applications effectively. The lecture covered the three main Kubernetes Service types—ClusterIP, NodePort, and LoadBalancer—and their use cases. Students also learned how to scale instances in a Deployment, achieving automatic load-balancing across Pods using a ClusterIP Service. The session demonstrated how Kubernetes handles automatic updates of applications through rolling updates in Deployments and how it ensures high availability by automatically recovering failed instances.  
