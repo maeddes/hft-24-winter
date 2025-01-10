@@ -180,7 +180,7 @@ By the end of this lecture, students will be able to:
 - Get a Dockerhub account
 - Work through the exercises
 
-## **2024 / 11 / 08 - Cloud-Native Theory and Persistence **  
+## **2024 / 11 / 08 - Cloud-Native Theory and Persistence**  
 
 ### **Content Overview**
 
