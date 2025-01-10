@@ -203,6 +203,7 @@ By the end of this lecture, students will be able to:
 - Explain Conway’s Law and its influence on software architecture, especially in the context of microservices.
 - List and apply the 12 factors for building scalable, portable, and maintainable applications.
 - Define and differentiate microservices architecture from other architectural styles.
+- Domain Driven Design is not relevant for the exam!
 
 - Explain the concepts of **persistence** and **ORM** and identify their importance in distributed, database-driven applications.
 - Set up **Spring Data JPA** to interact with a relational database and configure it using Docker Compose.
