@@ -54,7 +54,7 @@ By the end of this lecture, students will be able to:
 - Identify the major cloud providers and tell about their evolution.
 - Differentiate between cloud service models and discuss their evolution, including modern abstraction models like CaaS.
 - Explain the role of CNCF and analyze the CNCF landscape to identify key technologies and trends.
-- Provide an overview of Kubernetes, eBPF, and OpenTelemetry, explaining their impact on cloud-native development.
+- Provide an overview of Kubernetes  (,eBPF, and OpenTelemetry,) explaining their impact on cloud-native development.
 
 ---
 
@@ -66,8 +66,6 @@ By the end of this lecture, students will be able to:
 4. What is the CNCF, and why is it important in the context of cloud-native technologies?
 #### For later:
 5. How does Kubernetes help in managing containerized applications in cloud-native environments?
-6. What is eBPF, and what advantages does it provide in terms of system monitoring and security?
-7. Explain the role of OpenTelemetry in modern cloud systems. How does it contribute to observability?
 
 ---
 
