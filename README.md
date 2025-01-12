@@ -220,8 +220,7 @@ e.g. how do technologies like Spring Boot (or other frameworks/languages), Docke
 2. How does Conway’s Law impact the structure of a distributed system, especially when adopting a microservices architecture?
 3. What are the key factors of a 12-factor app, and how do they contribute to application scalability and resilience?
 4. Describe microservices concepts and some of its advantages over a monolithic architecture.
-5. What is Object-Relational Mapping (ORM), and why is it beneficial for a database-backed application?
-6. Explain how Spring Data JPA helps in managing CRUD operations in a database. 
+5. Explain how Spring Data JPA helps in managing CRUD operations in a database. 
 
 ---
 
@@ -308,9 +307,7 @@ By the end of this lecture, students will be able to:
 ---  
 
 ### **Student/Review Questions**  
-
-1. What are the main differences between Docker’s bridge and host network modes?  
-2. How does a named volume differ from a bind mount, and when should each be used?  
+ 
 3. In a `docker-compose.yml` file, how do you define a custom network and attach services to it?  
 4. What is the purpose of Docker’s internal DNS service, and how does it enhance container communication?  
 5. How can you persist data for a containerized database across container restarts?
@@ -371,7 +368,7 @@ By the end of this lecture, students will be able to:
 
 ### **Student/Review Questions**
 
-1. **What is Kubernetes, and why is it essential for managing containerized applications?**  
+1. **What is Kubernetes, and why is it beneficial for managing containerized applications?**  
 2. **Describe the roles of the control plane and worker nodes in a Kubernetes cluster.**  
 3. **What is the function of the `kube-apiserver` and `etcd` in Kubernetes?**  
 4. **Explain Kubernetes’ declarative working mode. How does the reconciliation loop ensure consistency?**  

@@ -23,3 +23,4 @@ ENV FLASK_RUN_HOST=0.0.0.0
 # Step 8: Run the Flask application
 CMD ["flask", "run"]
 
+
